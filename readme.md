@@ -41,3 +41,16 @@ How about N > 1?
     Which leads to F(3) = max(10, 9+9) = 18
     
     The solution may hence be generalized to F(N) = max(F(N-1), F(N-2) + cN)
+
+## Change-Making Problem
+### Source:
+    Section 8.1 Example 2, Design & Analysis of Algorithms 3rd Ed.
+    - Anany Levitin
+### Description:
+Given ***Coins[0..n]*** of coins of different denominations, find minium amount of coins required to generate n amount
+
+Example: 
+Given C[1, 5, 20, 25], N=59
+Output: [25, 25, 5, 1, 1, 1, 1], 7 coins required to make 59
+### Solution:
+Will explain later, solution uploaded
