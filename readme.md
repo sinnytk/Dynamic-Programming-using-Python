@@ -53,4 +53,42 @@ Example:
 Given C[1, 5, 20, 25], N=59
 Output: [25, 25, 5, 1, 1, 1, 1], 7 coins required to make 59
 ### Solution:
-Will explain later, solution uploaded
+Again as we go about dynamic approaches. We will define base cases.
+
+If we want change for N=0, the amount of coins is obviously 0.
+
+
+What if N > 0?
+
+    We'll go about this similarly to CoinRow.
+    By applying on an example.
+
+    Let C = [1,5,20,25]
+
+    If N=1,
+    We only pick C1.
+    Solution = 1 coins
+
+    If N=2,
+    We pick 2x C1
+    Solution = 2 coins
+
+    If N=3,
+    We pick 3x C1
+    Solution = 3 coins
+
+    If N = 25
+    We pick 1x C4
+    Solution = 1 coins
+
+    The general solution here is that we check
+    through all available denominations and add one coin of 
+    current denomination.
+
+    Therefore,
+    F(25) = min{F(25-1), F(25-5), F(25-20), F(25-25)}+1
+
+    F(25) = 0 + 1 = 1
+
+    So the general solution is:
+    F(n) = min{F(n-j) for all j<=n} + 1
